@@ -1,0 +1,27 @@
+list = []
+n = int(input("enter limit:"))
+for i in range(n):
+    list.append(int(input(f"Enter elements {i + 1}:")))
+print(f"The array is : {list}")
+for i in range(n):
+    for j in range(i + 1, n):
+        if list[i] > list[j]:
+            temp = list[i]
+            list[i] = list[j]
+            list[j] = temp
+print("sorted array is:", list)
+
+
+output
+-------
+enter limit:6
+Enter elements 1:30
+Enter elements 2:50
+Enter elements 3:100
+Enter elements 4:1
+Enter elements 5:25
+Enter elements 6:15
+The array is : [30, 50, 100, 1, 25, 15]
+sorted array is: [1, 15, 25, 30, 50, 100]
+
+Process finished with exit code 0
