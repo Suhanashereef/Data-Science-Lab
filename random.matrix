@@ -1,0 +1,38 @@
+Create a square matrix with random integer value use randint and use appropriate functions to find
+a) Diterminant 
+b) Inverse
+c) Rank of matrix
+d) Transform matrix into id array
+
+
+       CODE
+       ----
+
+import numpy as np
+matrix = np.random.randint(10,size=(2,2))
+print("random matrix is:")
+print(matrix)
+print("Determinant of the matrix")
+print(np.linalg.det(matrix))
+print("inverse of the matrix")
+print(np.linalg.inv(matrix))
+print("rank of the matrix")
+print(np.linalg.matrix_rank(matrix))
+print("ID array")
+print(matrix.flatten())
+
+     OUTPUT
+     ------
+
+random matrix is:
+[[5 9]
+ [8 6]]
+Determinant of the matrix
+-41.999999999999986
+inverse of the matrix
+[[-0.14285714  0.21428571]
+ [ 0.19047619 -0.11904762]]
+rank of the matrix
+2
+ID array
+[5 9 8 6]
