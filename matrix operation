@@ -1,0 +1,59 @@
+Create 2 2d array using array object
+a) Add 2 matrixes
+b) Subtract 2 matrixes
+c) Multiply the individual elements of matrixes
+d) Divides the elements of matrixes
+e) Perform matrix multipilcation
+f) Display the tranpose of the matrix
+g) Sum of diagonal elements of matrix
+
+
+       CODE
+      ------
+import numpy as np
+ar1=np.array([[2,4],[3,5]])
+ar2=np.array([[3,4],[2,6]])
+print(ar1)
+print(ar2)
+print("Matrix Addition")
+print(np.add(ar1,ar2))
+print("Matrix Subtraction")
+print(np.subtract(ar1,ar2))
+print("Multiplication of Individual elements:")
+print(np.multiply(ar1,ar2))
+print("Matrix Division")
+print(np.divide(ar1,ar2))
+print("Matrix Multiplication")
+print(np.dot(ar1,ar2))
+print("Matrix Transform")
+print(ar1.transpose())
+print("sum of diagonal elements")
+print((np.trace(ar1)))
+
+          OUTPUT
+          ------
+
+[[2 4]
+ [3 5]]
+[[3 4]
+ [2 6]]
+a) Matrix Addition
+[[ 5  8]
+ [ 5 11]]
+b)Matrix Subtraction
+[[-1  0]
+ [ 1 -1]]
+c)Multiplication of Individual elements:
+[[ 6 16]
+ [ 6 30]]
+Matrix Division
+d)[0.66666667 1.        ]
+ [1.5        0.83333333]]
+e)Matrix Multiplication
+[[14 32]
+ [19 42]]
+f)Matrix Transform
+[[2 3]
+ [4 5]]
+g)sum of diagonal elements
+7
