@@ -3,41 +3,38 @@ matrix from the three matrixes obtained after performing SVD.
 
 CODE
 -----
-import  numpy as np
-A=np.array([[2,3],[5,6]])
-print("matrix is \n" ,A)
+import numpy as np
+A = np.array([[1, 2],[3, 4],[5,6]])
+print(A)
 U,s,VT=np.linalg.svd(A)
-print("Left singular matrix:")
+print("Left Singular Matrix")
 print(U)
-print("singular matrix:")
+print("Singular Matrix")
 print(s)
-print("Right singular matrix:")
+print("Right Singular Matrix")
 print(VT)
-sigma=np.zeros((A.shape[0],A.shape[1]))
-print("sigma : \n",sigma)
-np.fill_diagonal(sigma, s)
-B=U.dot(sigma.dot(VT))
-print("Reconstructed matrix:\n",B)
+Sigma = np.zeros((A.shape[0], A.shape[1]))
+np.fill_diagonal(Sigma, s)
+B = U.dot(Sigma.dot(VT))
+print("Reconstructed Matrix:\n",B)
 
 OUTPUT
 ------
-C:\Users\mlm\PycharmProjects\Matrix\venv\Scripts\python.exe C:\Users\mlm\PycharmProjects\Matrix\svd.py 
-matrix is 
- [[2 3]
+C:\Users\MLM\PycharmProjects\pythonProject1\venv\Scripts\python.exe C:\Users\MLM\PycharmProjects\pythonProject1\SVD.PY 
+[[1 2]
+ [3 4]
  [5 6]]
-Left singular matrix:
-[[-0.41785681 -0.9085129 ]
- [-0.9085129   0.41785681]]
-singular matrix:
-[8.59524158 0.34903033]
-Right singular matrix:
-[[-0.62572739 -0.78004181]
- [ 0.78004181 -0.62572739]]
-sigma : 
- [[0. 0.]
- [0. 0.]]
-Reconstructed matrix:
- [[2. 3.]
+Left Singular Matrix
+[[-0.2298477   0.88346102  0.40824829]
+ [-0.52474482  0.24078249 -0.81649658]
+ [-0.81964194 -0.40189603  0.40824829]]
+Singular Matrix
+[9.52551809 0.51430058]
+Right Singular Matrix
+[[-0.61962948 -0.78489445]
+ [-0.78489445  0.61962948]]
+Reconstructed Matrix:
+ [[1. 2.]
+ [3. 4.]
  [5. 6.]]
-
 Process finished with exit code 0
