@@ -11,49 +11,51 @@ g) Sum of diagonal elements of matrix
        CODE
       ------
 import numpy as np
-ar1=np.array([[2,4],[3,5]])
-ar2=np.array([[3,4],[2,6]])
-print(ar1)
-print(ar2)
-print("Matrix Addition")
+ar1=np.array([[1,2],[3,4]])
+ar2=np.array([[5,6],[7,8]])
+print("Add two Matrices")
 print(np.add(ar1,ar2))
-print("Matrix Subtraction")
+print("Subtract two matrices")
 print(np.subtract(ar1,ar2))
-print("Multiplication of Individual elements:")
+print("Multiply individual elements of the matrices")
 print(np.multiply(ar1,ar2))
-print("Matrix Division")
+print("Divide the elements of the matrices")
 print(np.divide(ar1,ar2))
-print("Matrix Multiplication")
+print("Perform matrix Multiplication")
 print(np.dot(ar1,ar2))
-print("Matrix Transform")
+print("Display the transpose of the matrices")
 print(ar1.transpose())
-print("sum of diagonal elements")
-print((np.trace(ar1)))
+print(ar2.transpose())
+print("Sum of diagonal elements of the matrices")
+print(np.trace(ar1))
+print(np.trace(ar2))
 
           OUTPUT
           ------
 
-[[2 4]
- [3 5]]
-[[3 4]
- [2 6]]
-a) Matrix Addition
-[[ 5  8]
- [ 5 11]]
-b)Matrix Subtraction
-[[-1  0]
- [ 1 -1]]
-c)Multiplication of Individual elements:
-[[ 6 16]
- [ 6 30]]
-Matrix Division
-d)[0.66666667 1.        ]
- [1.5        0.83333333]]
-e)Matrix Multiplication
-[[14 32]
- [19 42]]
-f)Matrix Transform
-[[2 3]
- [4 5]]
-g)sum of diagonal elements
-7
+C:\Users\MLM\PycharmProjects\pythonProject1\venv\Scripts\python.exe C:\Users\MLM\PycharmProjects\pythonProject1\matrixop.py 
+Add two Matrices
+[[ 6  8]
+ [10 12]]
+Subtract two matrices
+[[-4 -4]
+ [-4 -4]]
+Multiply individual elements of the matrices
+[[ 5 12]
+ [21 32]]
+Divide the elements of the matrices
+[[0.2        0.33333333]
+ [0.42857143 0.5       ]]
+Perform matrix Multiplication
+[[19 22]
+ [43 50]]
+Display the transpose of the matrices
+[[1 3]
+ [2 4]]
+[[5 7]
+ [6 8]]
+Sum of diagonal elements of the matrices
+5
+13
+Process finished with exit code 0
+
